@@ -7,8 +7,6 @@ const ChatFeed = (props) => {
   let { activeChat, chats, messages, userName } = props;
   let chat = chats && chats[activeChat];
 
-  console.log(chat);
-
   const renderMessages = () => {
     const keys = Object.keys(messages);
 
