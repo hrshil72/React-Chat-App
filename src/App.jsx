@@ -4,9 +4,9 @@ import ChatFeed from "./components/ChatFeed";
 import LoginForm from "./components/LoginForm";
 
 const App = () => {
-  return !localStorage.getItem("username") ? (
-    <LoginForm />
-  ) : (
+  if (!localStorage.getItem("username")) return <LoginForm />;
+
+  return (
     <ChatEngine
       height="100vh"
       projectID="6105ce1a-ea6f-4e8d-978e-23d7e8b75ed3"
